@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="icon" href="{{ url_for('static', filename='assets/Logo.png') }}" type="image/gif" sizes="13x16">
+<!--<link rel="icon" href="static/assests/Logo.png" type="image/gif" sizes="13x16">-->
+<!--<link rel = "stylesheet" href = "static/style.css">-->
+<title>Major Project</title>
+</head>
+<body>
+
+<div id="loading">
+            <div id="loading-center">
+                <h2>PREDICTION MODEL FOR PAINT PIGMENT MIXTURES</h2>
+				<div id="names">
+				<p>Arjun Ramesh</p>
+				<p>Mugesh</p>
+				<p>Sashank Satvik</p>
+				<p>Theresa Sushil</p>
+				</div>
+				<div id="roll">
+					<p>B160021CH</p>
+					<p>B170655CH</p>
+				<p>B170591CH </p>
+				<p>B170477CH</p>
+				</div>
+				<h3>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Project Guides:</h3>
+				<div id="guide">
+					
+					<p>Dr Lity Alen Varghese</p>
+					<p><i>(Dept. of Chemical Engineering)</i></p>
+					<br>
+					<p>Dr Jayaraj P B</p>
+					<p><i> (Dept. of Computer Science Engineering)</i></p>
+					
+				</div>
+				
+            </div>
+		<button onClick="hide(this.parentNode);">NEXT</button>
+		<p>NATIONAL INSTITUTE OF TECHNOLOGY, CALICUT</p>
+        </div>
+
+<div class="moving-zone" id="circle0">
+    <div class="popup" id="cr0">
+    </div>
+</div>
+<div class="moving-zone" id="square">
+    <div class="square_popup">
+    </div>
+</div>
+	<div class="moving-zone" id="triangle">
+    <div class="triangle_popup">
+    </div>
+</div>
+
+	<div class="moving-zone" id="circle">
+    <div class="circle_popup" id="cr1">
+    </div>
+</div>
+<!--	<p>{{k}}</p>-->
+<div class="container" id="container">
+  <div class="form-container sign-in-container">
+    <form action="" method="POST">
+	<label for="cc1">Color 1</label>
+      <p id="color_1"><input id="cc1" type="text" placeholder="RGB" onchange="change1();" readonly="readonly"/></p>
+      <div class = "range_form"> 
+        <input id="range1" name="range1" type="range" min="0" max="255" value="{{c_r1}}" step="1" onchange="changes1();" disabled="disabled">
+        <input id="range2" name="range2" type="range" min="0" max="255" value="{{c_g1}}" step="1" onchange="changes1();" disabled="disabled">
+        <input id="range3" name="range3" type="range" min="0" max="255" value="{{c_b1}}" step="1" onchange="changes1();" disabled="disabled">
+      </div><br>
+		<label for="cc2">Color 2</label>
+       <p id="color_2"><input id="cc2" type="text" placeholder="RGB" onchange="change2();" readonly="readonly"/></p>
+      <div class = "range_form">
+        <input id="range4" name="range4" type="range" min="0" max="255" value="{{c_r2}}" step="1" onchange="changes2();" disabled="disabled">
+        <input id="range5" name="range5" type="range" min="0" max="255" value="{{c_g2}}" step="1" onchange="changes2();" disabled="disabled">
+        <input id="range6" name="range6" type="range" min="0" max="255" value="{{c_b2}}" step="1" onchange="changes2();" disabled="disabled">
+      </div>
+      <br>
+<!--
+		<input id="hidden1" type="hidden" value="" name="hidden1">
+		<input id="hidden2" type="hidden" value="" name="hidden2">
+		<input type="submit" name="submit_left" value="BLEND">
+-->
+<!--      <button>BLEND</button>-->
+    </form>
+  </div>
+<!--	<form action="" method="POST" id=>-->
+	<div class="in_between" id="in__between">
+		<div class="container-slider_in_between">
+    <br><br><br><br><br><br><br><br><br>
+			<input type="range" min="1" max="100" name="q_1" value="{{h1}}" id="v1" step="1" disabled="disabled">
+<!--			 onchange="submit();"-->
+    <div class="val" id="final1">{{f1}}</div>
+		</div></div>
+	<div class="in_between" id="_between">
+		<div class="container-slider_in_between">
+			
+    <br><br><br><br><br><br><br>
+		<input type="range" min="1" max="100" name="q_2" step="1" value="{{h2}}" id="v2" disabled="disabled">
+    <div class="val" id="final2">{{f2}}</div>
+		</div></div>
+<!--	</form>-->
+  <div class="overlay-container-up">
+    <div class="overlay-up">
+      <div class="overlay-panel-up overlay-right">
+        <h1 id="color_name">No Internet!!</h1>
+      </div>
+    </div>
+  </div>
+	<div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-right">
+		  <form id="reverse" action="" method="POST">
+			  <input id="cc3" type="text" placeholder="RGB" onchange="change3();"/><br>
+		  <input id="range7" name="range7" type="range" min="0" max="255" value="{{c_r3}}" step="1" onchange="changes3();">
+        <input id="range8" name="range8" type="range" min="0" max="255" value="{{c_g3}}" step="1" onchange="changes3();">
+        <input id="range9" name="range9" type="range" min="0" max="255" value="{{c_b3}}" step="1" onchange="changes3();">
+<!--			  <button>UNMIX</button>-->
+			  <input type="submit" name="submit_right" value="UNMIX">
+		  </form>
+		  
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src = "{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
