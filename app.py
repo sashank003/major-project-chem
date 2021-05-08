@@ -28,8 +28,8 @@ def index():
 		range4 = r2[0]
 		range5 = r2[1]
 		range6 = r2[2]
-		hidden1 = int(average(q1[res_u][0],q2[res_u][0]))
-		hidden2 = int(average(q2[res_u][0],q1[res_u][0]))
+		hidden1 = int(round(average(q1[res_u][0],q2[res_u][0]),0))
+		hidden2 = int(round(average(q2[res_u][0],q1[res_u][0]),0))
 	else:
 		pass
 	return render_template('index.html', c_r1=range1, c_g1=range2, c_b1=range3, c_r2=range4, c_g2=range5, c_b2=range6, c_r3=range7, c_g3=range8, c_b3=range9, h1=hidden1, h2=hidden2, f1=f'{hidden1}%', f2=f'{hidden2}%')
