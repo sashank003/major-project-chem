@@ -13,8 +13,8 @@ def index():
 	range7 = 0
 	range8 = 0
 	range9 = 0
-	hidden1 = 1
-	hidden2 = 1
+	hidden1 = 0
+	hidden2 = 0
 	if 'submit_right' in request.form:
 		range7 = request.form['range7']
 		range8 = request.form['range8']
